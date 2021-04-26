@@ -7,23 +7,6 @@
 
 import SwiftUI
 
-enum TaskType: Int, Codable {
-    case upcoming = 0
-    case inProgress
-    case completed
-    
-    var title: String {
-        switch self {
-        case .upcoming:
-            return "Upcoming"
-        case .inProgress:
-            return "In Progress"
-        case .completed:
-            return "Completed"
-        }
-    }
-}
-
 struct HomeView: View {
     // MARK:- Properties
     @StateObject var viewModel = HomeVM()

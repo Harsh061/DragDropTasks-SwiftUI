@@ -44,18 +44,6 @@ struct TaskDropDelegate: DropDelegate {
     var viewModel: HomeVM
     
     // MARK:- Methods
-    func dropEntered(info: DropInfo) {
-
-    }
-
-    func dropExited(info: DropInfo) {
-
-    }
-    
-    func dropUpdated(info: DropInfo) -> DropProposal? {
-        return DropProposal(operation: .move)
-    }
-    
     func performDrop(info: DropInfo) -> Bool {
         guard info.hasItemsConforming(to: [kUTTypeData as String]) else {
             return false
@@ -103,5 +91,17 @@ struct TaskDropDelegate: DropDelegate {
             }
         }
         return true
+    }
+    
+    func dropUpdated(info: DropInfo) -> DropProposal? {
+        return DropProposal(operation: .move)
+    }
+    
+    func dropEntered(info: DropInfo) {
+
+    }
+
+    func dropExited(info: DropInfo) {
+
     }
 }
