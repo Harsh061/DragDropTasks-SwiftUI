@@ -11,6 +11,12 @@
 		E186E38F26352BF200CDCFB3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E186E38E26352BF200CDCFB3 /* ContentView.swift */; };
 		E186E39126352BF300CDCFB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E186E39026352BF300CDCFB3 /* Assets.xcassets */; };
 		E186E39426352BF300CDCFB3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E186E39326352BF300CDCFB3 /* Preview Assets.xcassets */; };
+		E186E39E26352FBB00CDCFB3 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E186E39D26352FBB00CDCFB3 /* TaskListView.swift */; };
+		E186E3A22635304800CDCFB3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E186E3A12635304800CDCFB3 /* HomeView.swift */; };
+		E186E3A72635310900CDCFB3 /* TasksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E186E3A62635310900CDCFB3 /* TasksModel.swift */; };
+		E186E3AC2635317500CDCFB3 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E186E3AB2635317500CDCFB3 /* HomeVM.swift */; };
+		E186E3B32636A88D00CDCFB3 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E186E3B22636A88D00CDCFB3 /* TaskView.swift */; };
+		E186E3B72636A8D000CDCFB3 /* FlipEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E186E3B62636A8D000CDCFB3 /* FlipEffect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +26,12 @@
 		E186E39026352BF300CDCFB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E186E39326352BF300CDCFB3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E186E39526352BF300CDCFB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E186E39D26352FBB00CDCFB3 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
+		E186E3A12635304800CDCFB3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E186E3A62635310900CDCFB3 /* TasksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksModel.swift; sourceTree = "<group>"; };
+		E186E3AB2635317500CDCFB3 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		E186E3B22636A88D00CDCFB3 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
+		E186E3B62636A8D000CDCFB3 /* FlipEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipEffect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +64,10 @@
 		E186E38B26352BF200CDCFB3 /* DragDrop */ = {
 			isa = PBXGroup;
 			children = (
+				E186E3B52636A8BE00CDCFB3 /* HelperView */,
+				E186E3AA2635316600CDCFB3 /* ViewModel */,
+				E186E3A5263530FC00CDCFB3 /* Model */,
+				E186E39C26352F9B00CDCFB3 /* Views */,
 				E186E38C26352BF200CDCFB3 /* DragDropApp.swift */,
 				E186E38E26352BF200CDCFB3 /* ContentView.swift */,
 				E186E39026352BF300CDCFB3 /* Assets.xcassets */,
@@ -67,6 +83,40 @@
 				E186E39326352BF300CDCFB3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E186E39C26352F9B00CDCFB3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E186E3A12635304800CDCFB3 /* HomeView.swift */,
+				E186E39D26352FBB00CDCFB3 /* TaskListView.swift */,
+				E186E3B22636A88D00CDCFB3 /* TaskView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E186E3A5263530FC00CDCFB3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E186E3A62635310900CDCFB3 /* TasksModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E186E3AA2635316600CDCFB3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E186E3AB2635317500CDCFB3 /* HomeVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E186E3B52636A8BE00CDCFB3 /* HelperView */ = {
+			isa = PBXGroup;
+			children = (
+				E186E3B62636A8D000CDCFB3 /* FlipEffect.swift */,
+			);
+			path = HelperView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +188,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E186E39E26352FBB00CDCFB3 /* TaskListView.swift in Sources */,
+				E186E3B32636A88D00CDCFB3 /* TaskView.swift in Sources */,
+				E186E3A72635310900CDCFB3 /* TasksModel.swift in Sources */,
+				E186E3B72636A8D000CDCFB3 /* FlipEffect.swift in Sources */,
+				E186E3A22635304800CDCFB3 /* HomeView.swift in Sources */,
+				E186E3AC2635317500CDCFB3 /* HomeVM.swift in Sources */,
 				E186E38F26352BF200CDCFB3 /* ContentView.swift in Sources */,
 				E186E38D26352BF200CDCFB3 /* DragDropApp.swift in Sources */,
 			);
@@ -272,7 +328,7 @@
 				DEVELOPMENT_TEAM = 76J7APB488;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DragDrop/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +350,7 @@
 				DEVELOPMENT_TEAM = 76J7APB488;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DragDrop/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
