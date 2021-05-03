@@ -29,7 +29,17 @@ struct HomeView: View {
                     .padding(.horizontal, 10)
                     .onChange(of: selectedTab) { tag in
                         withAnimation() {
-                            proxy.scrollTo(tag, anchor: .leading)
+                            switch selectedTaskType {
+                            case .upcoming:
+                                proxy.scrollTo(tag, anchor: .leading)
+                                break
+                            case .inProgress:
+                                proxy.scrollTo(tag, anchor: .center)
+                                break
+                            case .completed:
+                                proxy.scrollTo(tag, anchor: .trailing)
+                                break
+                            }
                         }
                     }
                     
