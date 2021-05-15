@@ -32,7 +32,7 @@ struct TaskView: View {
             VStack(alignment: .leading, spacing: 5) {
                 Text("Task Id: ")
                     .font(.headline)
-                Text("\(task.id)")
+                Text("T\(task.id)")
                     .font(.subheadline)
 
                 Text("Name")

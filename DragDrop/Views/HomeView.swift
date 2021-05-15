@@ -12,6 +12,7 @@ struct HomeView: View {
     @StateObject var viewModel = HomeVM()
     @State private var selectedTab: Int = 0
     @State private var taskTypes: [TaskType] = [.upcoming, .inProgress, .completed]
+    @State private var addNewCard: Bool = false
     private var selectedTaskType: TaskType {
         return TaskType(rawValue: selectedTab) ?? .upcoming
     }
@@ -28,7 +29,7 @@ struct HomeView: View {
                     .pickerStyle(SegmentedPickerStyle())
                     .padding(.horizontal, 10)
                     .onChange(of: selectedTab) { tag in
-                        withAnimation() {
+                        withAnimation(.default) {
                             switch selectedTaskType {
                             case .upcoming:
                                 proxy.scrollTo(tag, anchor: .leading)
@@ -69,8 +70,14 @@ struct HomeView: View {
                     
                     Spacer()
                 }
+                .sheet(isPresented: $addNewCard) {
+                    AddNewCardView(viewModel: self.viewModel)
+                }
             }
             .navigationBarTitle(Text("Task Management"), displayMode: .large)
+            .navigationBarItems(trailing: Button("Add") {
+                self.addNewCard.toggle()
+            })
         }
     }
 }
